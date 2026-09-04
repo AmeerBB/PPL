@@ -2,7 +2,7 @@
 
 A single-file workout tracker for the Reddit PPL program. No account, no install, no server — one HTML file that runs in your browser and remembers your lifts.
 
-**[Open it →](https://ameerbb.github.io/ppl/ppl-log-app.html)**
+**[Open it →](https://ameerbb.github.io/PPL.html)**
 
 ## What it does
 
