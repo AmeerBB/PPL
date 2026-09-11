@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+<title>2-Day Log</title>
+<meta name="theme-color" content="#1F2225">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="2-Day Log">
+<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAYAAAA9zQYyAAADTUlEQVR4nO3cMa7dRBiA0ZeIijVEiogUsYYsgxJlLxTsJUrJMlgDFQ1rSBuauAmC3Id9r39/c84KxjOfRyON5Rev37z9/AQRL88eABxJ0KQImhRBkyJoUgRNiqBJETQpgiZF0KQImhRBkyJoUgRNiqBJETQpgiZF0KQImhRBkyJoUgRNiqBJETQpgiZF0KQImhRBkyJoUgRNiqBJETQpgiZF0KQImhRBkyJoUgRNiqBJETQpgiZF0KQImhRBkyJoUgRNiqBJETQp3509gFt8+OH7s4fAF+///HT2EP7Ti9dv3n4+exD/RshzTQ17ZNBCvo5pYY87Q4v5Wqat17igYY9RQU9727nNpHUbFTTsNSboSW85zzdl/cYEDUcQNCmCJkXQpIwJetqNE88zZf3GBA1HGBX0lLec55m0bqOChr3GBT3pbefbpq3XyM9HN1Nun/inaSFvRge9EfYcU0PeXCJouNW4MzTsIWhSBE2KoEkRNCmCJkXQpAiaFEGTImhSBE2KoEm5xP+hX/3829lDGO+vjz+dPYQRRn9tJ+TnWz3skUELeb9Vwx53hhbzMVadx3FBwx6jgl51V7mXFedzVNCw15igV9xNHmG1eR0TNBxB0KQImhRBkzIm6FVvtu5ttXkdEzQcYVTQq+0m97bifI4KGvYaF/SKu8o9rDqPIz8f3ax2y3WEVUPejA56I+xvWz3kzSWChluNO0PDHoImRdCkCJoUQZMiaFIETYqgSRE0KYImRdCkCJqUS/wf+sdf3p09hP/tj19/P3sISxn9td2VQ/6asB9jZNClkL8m7Psad4Yux/z01H++s40LGvYYFfQqu9cqz3mGUUHDXmOCXm3XWu15H2VM0HAEQZMiaFIETcqYoFe7QVvteR9lTNBwhFFBr7JrrfKcZxgVNOw1Luj67lV/vrON/Hx0U7pNE/JjjA56c+WwhfxYlwgabjXuDA17CJoUQZMiaFIETYqgSRE0KYImRdCkCJoUQZMiaFIETYqgSRE0KYImRdCkCJoUQZMiaFIETYqgSRE0KYImRdCkCJoUQZMiaFIETYqgSRE0KYImRdCkCJoUQZMiaFIETYqgSRE0KYImRdCkCJoUQZMiaFIETYqgSRE0KX8D3cx6r5CYKlwAAAAASUVORK5CYII=">
+<link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAYAAAA9zQYyAAADTUlEQVR4nO3cMa7dRBiA0ZeIijVEiogUsYYsgxJlLxTsJUrJMlgDFQ1rSBuauAmC3Id9r39/c84KxjOfRyON5Rev37z9/AQRL88eABxJ0KQImhRBkyJoUgRNiqBJETQpgiZF0KQImhRBkyJoUgRNiqBJETQpgiZF0KQImhRBkyJoUgRNiqBJETQpgiZF0KQImhRBkyJoUgRNiqBJETQpgiZF0KQImhRBkyJoUgRNiqBJETQpgiZF0KQImhRBkyJoUgRNiqBJETQp3509gFt8+OH7s4fAF+///HT2EP7Ti9dv3n4+exD/RshzTQ17ZNBCvo5pYY87Q4v5Wqat17igYY9RQU9727nNpHUbFTTsNSboSW85zzdl/cYEDUcQNCmCJkXQpIwJetqNE88zZf3GBA1HGBX0lLec55m0bqOChr3GBT3pbefbpq3XyM9HN1Nun/inaSFvRge9EfYcU0PeXCJouNW4MzTsIWhSBE2KoEkRNCmCJkXQpAiaFEGTImhSBE2KoEm5xP+hX/3829lDGO+vjz+dPYQRRn9tJ+TnWz3skUELeb9Vwx53hhbzMVadx3FBwx6jgl51V7mXFedzVNCw15igV9xNHmG1eR0TNBxB0KQImhRBkzIm6FVvtu5ttXkdEzQcYVTQq+0m97bifI4KGvYaF/SKu8o9rDqPIz8f3ax2y3WEVUPejA56I+xvWz3kzSWChluNO0PDHoImRdCkCJoUQZMiaFIETYqgSRE0KYImRdCkCJqUS/wf+sdf3p09hP/tj19/P3sISxn9td2VQ/6asB9jZNClkL8m7Psad4Yux/z01H++s40LGvYYFfQqu9cqz3mGUUHDXmOCXm3XWu15H2VM0HAEQZMiaFIETcqYoFe7QVvteR9lTNBwhFFBr7JrrfKcZxgVNOw1Luj67lV/vrON/Hx0U7pNE/JjjA56c+WwhfxYlwgabjXuDA17CJoUQZMiaFIETYqgSRE0KYImRdCkCJoUQZMiaFIETYqgSRE0KYImRdCkCJoUQZMiaFIETYqgSRE0KYImRdCkCJoUQZMiaFIETYqgSRE0KYImRdCkCJoUQZMiaFIETYqgSRE0KYImRdCkCJoUQZMiaFIETYqgSRE0KX8D3cx6r5CYKlwAAAAASUVORK5CYII=">
+<link rel="manifest" href="data:application/manifest+json;base64,eyJuYW1lIjogIjItRGF5IExvZyIsICJzaG9ydF9uYW1lIjogIjItRGF5IiwgInN0YXJ0X3VybCI6ICIuL3R3by1kYXkuaHRtbCIsICJkaXNwbGF5IjogInN0YW5kYWxvbmUiLCAiYmFja2dyb3VuZF9jb2xvciI6ICIjMUYyMjI1IiwgInRoZW1lX2NvbG9yIjogIiMxRjIyMjUiLCAiaWNvbnMiOiBbeyJzcmMiOiAiZGF0YTppbWFnZS9wbmc7YmFzZTY0LGlWQk9SdzBLR2dvQUFBQU5TVWhFVWdBQUFMUUFBQUMwQ0FZQUFBQTl6UVl5QUFBRFRVbEVRVlI0bk8zY01hN2RSQmlBMFplSWlqVkVpb2dVc1lZc2d4SmxMeFRzSlVySk1sZ0RGUTFyU0J1YXVBbUMzSWQ5cjM5L2M4NEt4ak9mUnlPTjVSZXYzN3o5L0FRUkw4OGVBQnhKMEtRSW1oUkJreUpvVWdSTmlxQkpFVFFwZ2laRjBLUUltaFJCa3lKb1VnUk5pcUJKRVRRcGdpWkYwS1FJbWhSQmt5Sm9VZ1JOaXFCSkVUUXBnaVpGMEtRSW1oUkJreUpvVWdSTmlxQkpFVFFwZ2laRjBLUUltaFJCa3lKb1VnUk5pcUJKRVRRcGdpWkYwS1FJbWhSQmt5Sm9VZ1JOaXFCSkVUUXAzNTA5Z0Z0OCtPSDdzNGZBRisvLy9IVDJFUDdUaTlkdjNuNCtleEQvUnNoelRRMTdaTkJDdm81cFlZODdRNHY1V3FhdDE3aWdZWTlSUVU5NzI3bk5wSFViRlRUc05TYm9TVzg1enpkbC9jWUVEVWNRTkNtQ0prWFFwSXdKZXRxTkU4OHpaZjNHQkExSEdCWDBsTGVjNTVtMGJxT0NocjNHQlQzcGJlZmJwcTNYeU05SE4xTnVuL2luYVNGdlJnZTlFZlljVTBQZVhDSm91Tlc0TXpUc0lXaFNCRTJLb0VrUk5DbUNKa1hRcEFpYUZFR1RJbWhTQkUyS29FbTV4UCtoWC8zODI5bERHTyt2anorZFBZUVJSbjl0SitUbld6M3NrVUVMZWI5Vnd4NTNoaGJ6TVZhZHgzRkJ3eDZqZ2w1MVY3bVhGZWR6Vk5DdzE1aWdWOXhOSG1HMWVSMFROQnhCMEtRSW1oUkJrekltNkZWdnR1NXR0WGtkRXpRY1lWVFFxKzBtOTdiaWZJNEtHdllhRi9TS3U4bzlyRHFQSXo4ZjNheDJ5M1dFVlVQZWpBNTZJK3h2V3oza3pTV0NobHVOTzBQREhvSW1SZENrQ0pvVVFaTWlhRklFVFlxZ1NSRTBLWUltUmRDa0NKcVVTL3dmK3NkZjNwMDloUC90ajE5L1Azc0lTeG45dGQyVlEvNmFzQjlqWk5DbGtMOG03UHNhZDRZdXgvejAxSCsrczQwTEd2WVlGZlFxdTljcXozbUdVVUhEWG1PQ1htM1hXdTE1SDJWTTBIQUVRWk1pYUZJRVRjcVlvRmU3UVZ2dGVSOWxUTkJ3aEZGQnI3SnJyZktjWnhnVk5PdzFMdWo2N2xWL3ZyT04vSHgwVTdwTkUvSmpqQTU2YytXd2hmeFlsd2dhYmpYdURBMTdDSm9VUVpNaWFGSUVUWXFnU1JFMEtZSW1SZENrQ0pvVVFaTWlhRklFVFlxZ1NSRTBLWUltUmRDa0NKb1VRWk1pYUZJRVRZcWdTUkUwS1lJbVJkQ2tDSm9VUVpNaWFGSUVUWXFnU1JFMEtZSW1SZENrQ0pvVVFaTWlhRklFVFlxZ1NSRTBLWUltUmRDa0NKb1VRWk1pYUZJRVRZcWdTUkUwS1g4RDNjeDZyNUNZS2x3QUFBQUFTVVZPUks1Q1lJST0iLCAic2l6ZXMiOiAiMTgweDE4MCIsICJ0eXBlIjogImltYWdlL3BuZyIsICJwdXJwb3NlIjogImFueSJ9XX0=">
+<style>
+  html { background: #1F2225; }
+  body { margin: 0; background: #1F2225; overscroll-behavior-y: none; }
+</style>
+</head>
+<body>
+<div id="root">
+  <div id="boot">Loading your log…</div>
+</div>
+
+<style>
+  #root {
+    --floor: #1F2225;
+    --panel: #292D31;
+    --panel2: #33383D;
+    --line: #3E4449;
+    --chalk: #F1EFEA;
+    --muted: #8D949B;
+    --push: #3B7BD4;
+    --pull: #C4432F;
+    --legs: #46A05E;
+    --amber: #E5B03B;
+
+    background: var(--floor);
+    color: var(--chalk);
+    font-family: "Barlow", ui-sans-serif, -apple-system, "Segoe UI", Roboto, sans-serif;
+    font-size: 16px;
+    line-height: 1.4;
+    padding: 14px 12px 96px;
+    margin: 0;
+    min-height: 90vh;
+    -webkit-font-smoothing: antialiased;
+  }
+  #root * { box-sizing: border-box; }
+  #root button { font-family: inherit; color: inherit; cursor: pointer; }
+  #root input { font-family: inherit; }
+  #root :focus-visible { outline: 2px solid var(--amber); outline-offset: 2px; }
+
+  .topbar { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 18px; }
+  .meta { color: var(--muted); font-size: 13px; letter-spacing: .02em; }
+  .tools { display: flex; gap: 6px; }
+  .tool {
+    background: var(--panel); border: 1px solid var(--line); border-radius: 7px;
+    padding: 6px 10px; font-size: 13px; font-weight: 600;
+  }
+  .tool.on { background: var(--chalk); color: var(--floor); border-color: var(--chalk); }
+
+  .sessionhead { display: flex; align-items: baseline; gap: 10px; margin-bottom: 4px; }
+  .sessionhead h1 {
+    margin: 0; font-size: 40px; line-height: .95; font-weight: 800; letter-spacing: -.03em;
+  }
+  .rule { height: 6px; border-radius: 3px; margin: 12px 0 20px; }
+  .daynav { display: flex; gap: 5px; margin-bottom: 18px; flex-wrap: wrap; }
+  .daynav button {
+    flex: 1 1 0; min-width: 46px; background: transparent; border: 1px solid var(--line);
+    border-radius: 7px; padding: 7px 2px; font-size: 12px; font-weight: 700; color: var(--muted);
+  }
+  .daynav button.now { color: var(--floor); border-color: transparent; }
+
+  .ex { border-top: 1px solid var(--line); padding: 16px 0 18px; }
+  .ex:last-of-type { border-bottom: 1px solid var(--line); }
+  .exhead { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+  .exname { font-size: 19px; font-weight: 700; letter-spacing: -.01em; }
+  .target { color: var(--muted); font-size: 14px; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .swap { display: block; background: none; border: 0; padding: 2px 0 0; font-size: 12px; color: var(--muted); text-decoration: underline; }
+
+  .loadrow { display: flex; align-items: center; gap: 10px; margin: 12px 0 12px; }
+  .step {
+    width: 44px; height: 44px; flex: none; border-radius: 10px;
+    background: var(--panel); border: 1px solid var(--line); font-size: 22px; font-weight: 600; line-height: 1;
+  }
+  .step:active { background: var(--panel2); }
+  .load {
+    width: 96px; height: 44px; background: transparent; border: 0; border-bottom: 2px solid var(--line);
+    color: var(--chalk); font-size: 30px; font-weight: 800; letter-spacing: -.02em;
+    text-align: center; font-variant-numeric: tabular-nums; padding: 0;
+  }
+  .unit { color: var(--muted); font-size: 14px; font-weight: 600; }
+
+  .sets { display: flex; gap: 7px; flex-wrap: wrap; }
+  .setwrap { position: relative; }
+  .setin {
+    width: 52px; height: 50px; border-radius: 10px; background: var(--panel);
+    border: 1px solid var(--line); color: var(--chalk); text-align: center;
+    font-size: 19px; font-weight: 700; font-variant-numeric: tabular-nums; padding: 0;
+  }
+  .setin::placeholder { color: #5C6369; font-weight: 500; }
+  .setin.hit { border-color: var(--legs); box-shadow: inset 0 0 0 1px var(--legs); }
+  .setin.miss { border-color: var(--pull); box-shadow: inset 0 0 0 1px var(--pull); }
+  .setwrap.amrap::after {
+    content: "AMRAP"; position: absolute; left: 0; right: 0; bottom: -14px;
+    text-align: center; font-size: 9px; font-weight: 700; color: var(--amber); letter-spacing: .06em;
+  }
+  .setwrap.amrap { margin-bottom: 14px; }
+
+  .note { color: var(--muted); font-size: 13px; margin-top: 10px; }
+  .note b { color: var(--chalk); font-weight: 600; }
+  .note a { color: var(--chalk); text-decoration: underline; text-underline-offset: 2px; }
+
+  .bar {
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 20;
+    background: rgba(31,34,37,.96); border-top: 1px solid var(--line);
+    padding: 10px 12px calc(10px + env(safe-area-inset-bottom));
+    display: flex; gap: 8px; align-items: center;
+  }
+  .timer {
+    flex: none; min-width: 92px; height: 46px; border-radius: 10px; background: var(--panel);
+    border: 1px solid var(--line); font-size: 17px; font-weight: 700; font-variant-numeric: tabular-nums;
+  }
+  .timer.run { border-color: var(--amber); color: var(--amber); }
+  .finish {
+    flex: 1; height: 46px; border-radius: 10px; border: 0; background: var(--chalk); color: var(--floor);
+    font-size: 16px; font-weight: 800; letter-spacing: -.01em;
+  }
+  .finish:disabled { opacity: .45; }
+
+  .sheet {
+    position: fixed; inset: 0; z-index: 40; background: rgba(15,17,19,.72);
+    display: flex; align-items: flex-end;
+  }
+  .sheetin {
+    background: var(--floor); width: 100%; max-height: 82vh; overflow-y: auto;
+    border-top: 1px solid var(--line); border-radius: 16px 16px 0 0; padding: 18px 14px 28px;
+  }
+  .sheetin h2 { margin: 0 0 12px; font-size: 24px; font-weight: 800; letter-spacing: -.02em; }
+  .hrow { border-top: 1px solid var(--line); padding: 11px 0; font-size: 14px; }
+  .hrow .d { color: var(--muted); font-size: 12px; }
+  .close { width: 100%; margin-top: 16px; height: 44px; border-radius: 10px; background: var(--panel); border: 1px solid var(--line); font-weight: 700; }
+  .danger { color: #E7796A; background: none; border: 0; padding: 10px 0; font-size: 13px; text-decoration: underline; }
+  .empty { color: var(--muted); font-size: 14px; padding: 10px 0 0; }
+  .toast {
+    position: fixed; left: 12px; right: 12px; bottom: 74px; z-index: 30;
+    background: var(--chalk); color: var(--floor); border-radius: 10px;
+    padding: 11px 13px; font-size: 14px; font-weight: 600;
+  }
+</style>
+
+<script>
+(function () {
+  var root = document.getElementById("root");
+
+  /* ---------- storage (falls back to memory if unavailable) ---------- */
+  var mem = {};
+  function local(k, v) {
+    try {
+      if (v === undefined) { var s = window.localStorage.getItem(k); return s ? JSON.parse(s) : null; }
+      window.localStorage.setItem(k, JSON.stringify(v));
+    } catch (e) { if (v === undefined) return mem[k] !== undefined ? mem[k] : null; }
+    return null;
+  }
+  var store = {
+    get: async function (k) {
+      try { var r = await window.storage.get(k); if (r) return JSON.parse(r.value); } catch (e) {}
+      return local(k);
+    },
+    set: async function (k, v) {
+      mem[k] = v;
+      local(k, v);
+      try { await window.storage.set(k, JSON.stringify(v)); } catch (e) {}
+    }
+  };
+  var KEY = "ppl:2day:v1";
+
+  /* ---------- program ---------- */
+  // lp = linear progression (add load every session you hit it)
+  // dp = double progression (own the top of the rep range on every set, then add load)
+  function ex(id, name, sets, low, high, kind, amrap, heavy) {
+    return { id: id, name: name, sets: sets, low: low, high: high, kind: kind, amrap: !!amrap, heavy: !!heavy };
+  }
+  // Two alternating sessions. Calf raise carries the same id on both days,
+  // so the two days share one load and it progresses whenever you earn it.
+  var SESSIONS = [
+    { id: "pull", name: "Pull", short: "Pull", color: "pull",
+      ex: [
+        ex("row", "Barbell row", 5, 5, 5, "lp", true, true),
+        ex("squat", "Squat", 5, 5, 5, "lp", true, true),
+        ex("latpull", "Lat pulldown", 3, 8, 12, "dp"),
+        ex("cablerow", "Seated cable row", 3, 8, 12, "dp"),
+        ex("facepull", "Face pull", 5, 15, 20, "dp"),
+        ex("hammer", "Hammer curl", 4, 8, 12, "dp"),
+        ex("dbcurl", "Dumbbell curl", 4, 8, 12, "dp"),
+        ex("rdl", "Romanian deadlift", 3, 8, 12, "dp"),
+        ex("calf", "Calf raise", 5, 8, 12, "dp")
+      ] },
+    { id: "push", name: "Push", short: "Push", color: "push",
+      ex: [
+        ex("bench", "Bench press", 5, 5, 5, "lp", true, true),
+        ex("ohp2", "Overhead press", 3, 8, 12, "dp"),
+        ex("incdb", "Incline dumbbell press", 3, 8, 12, "dp"),
+        ex("pushdown", "Triceps pushdown", 3, 8, 12, "dp"),
+        ex("lat1", "Lateral raise", 3, 15, 20, "dp"),
+        ex("ohext", "Overhead triceps extension", 3, 8, 12, "dp"),
+        ex("lat2", "Lateral raise", 3, 15, 20, "dp"),
+        ex("legpress", "Leg press", 3, 8, 12, "dp"),
+        ex("legcurl", "Leg curl", 3, 8, 12, "dp"),
+        ex("calf", "Calf raise", 5, 8, 12, "dp")
+      ] }
+  ];
+
+  /* ---------- state ---------- */
+  var S = {
+    unit: "lb",
+    idx: 0,            // position in the 2-session cycle
+    count: 0,          // sessions completed
+    weights: {},       // exId -> load
+    fails: {},         // exId -> consecutive misses (lp only)
+    draft: {},         // exId -> [reps]
+    draftFor: "pull",
+    history: []
+  };
+  var timer = { left: 0, on: false, tick: null };
+  var sheet = null;
+  var toastMsg = "", toastT = null;
+
+  function stepFor(e) {
+    var big = (e.id === "dead" || e.id === "squat");
+    if (S.unit === "kg") return big ? 5 : 2.5;
+    return big ? 10 : 5;
+  }
+  function round(v) {
+    var q = S.unit === "kg" ? 2.5 : 5;
+    return Math.max(0, Math.round(v / q) * q);
+  }
+  function fmt(v) {
+    if (v === undefined || v === null || v === "") return "";
+    return (Math.round(v * 10) / 10).toString().replace(/\.0$/, "");
+  }
+  function target(e) {
+    if (e.amrap) return e.sets > 1 ? (e.sets - 1) + "×5, 1×5+" : "1×5+";
+    if (e.low === e.high) return e.sets + "×" + e.low;
+    return e.sets + "×" + e.low + "–" + e.high;
+  }
+  function save() { store.set(KEY, S); }
+
+  /* ---------- rendering ---------- */
+  function render() {
+    var sess = SESSIONS[S.idx];
+    if (S.draftFor !== sess.id) { S.draft = {}; S.draftFor = sess.id; }
+    var c = "var(--" + sess.color + ")";
+    var week = Math.floor(S.count / 2) + 1;
+
+    var h = "";
+    h += '<div class="topbar">';
+    h += '<div class="meta">Week ' + week + ' · ' + S.count + ' sessions logged</div>';
+    h += '<div class="tools">';
+    h += '<button class="tool' + (S.unit === "lb" ? " on" : "") + '" data-unit="lb">lb</button>';
+    h += '<button class="tool' + (S.unit === "kg" ? " on" : "") + '" data-unit="kg">kg</button>';
+    h += '<button class="tool" data-sheet="history">Log</button>';
+    h += '</div></div>';
+
+    h += '<div class="sessionhead"><h1>' + sess.name + '</h1></div>';
+    h += '<div class="rule" style="background:' + c + '"></div>';
+
+    h += '<div class="daynav">';
+    for (var i = 0; i < SESSIONS.length; i++) {
+      var s2 = SESSIONS[i];
+      var on = i === S.idx;
+      h += '<button data-goto="' + i + '" class="' + (on ? "now" : "") + '"' +
+           (on ? ' style="background:var(--' + s2.color + ');color:#fff"' : "") + '>' +
+           s2.name + '</button>';
+    }
+    h += '</div>';
+
+    sess.ex.forEach(function (e, ei) {
+      var w = S.weights[e.id];
+      var reps = S.draft[e.id] || [];
+      h += '<div class="ex">';
+      h += '<div class="exhead"><div><div class="exname">' + e.name + '</div>' +
+           (e.kind === "lp" ? '<span class="note" style="margin:0">' +
+              (S.fails[e.id] ? S.fails[e.id] + ' missed in a row' : 'Adds ' + fmt(stepFor(e)) + ' ' + S.unit + ' when you hit it') +
+            '</span>' : '') +
+           '</div><div class="target">' + target(e) + '</div></div>';
+
+      h += '<div class="loadrow">';
+      h += '<button class="step" data-load="' + ei + '" data-dir="-1">−</button>';
+      h += '<input class="load" type="number" inputmode="decimal" data-w="' + ei + '" value="' + fmt(w) + '" placeholder="—">';
+      h += '<span class="unit">' + S.unit + '</span>';
+      h += '<button class="step" data-load="' + ei + '" data-dir="1">+</button>';
+      h += '</div>';
+
+      h += '<div class="sets">';
+      for (var s = 0; s < e.sets; s++) {
+        var isA = e.amrap && s === e.sets - 1;
+        var v = reps[s];
+        var cls = "setin";
+        if (v !== undefined && v !== "" && !isNaN(v)) cls += (Number(v) >= (isA ? e.low : e.low) ? " hit" : " miss");
+        h += '<div class="setwrap' + (isA ? " amrap" : "") + '">' +
+             '<input class="' + cls + '" type="number" inputmode="numeric" data-rep="' + ei + '" data-set="' + s + '"' +
+             ' value="' + (v === undefined ? "" : v) + '" placeholder="' + e.low + (isA ? "+" : "") + '"></div>';
+      }
+      h += '</div>';
+      h += '</div>';
+    });
+
+    h += '<div class="note" style="margin-top:16px">Green means the set counted. Finish the session and every load updates itself for next time.</div>';
+    h += '<div class="note">Two days, alternating. This log is kept separate from the <a href="./">six-day version</a>.</div>';
+    h += '<button class="danger" data-sheet="reset">Start over</button>';
+
+    h += '<div class="bar">';
+    h += '<button class="timer' + (timer.on ? " run" : "") + '" data-timer="1">' +
+         (timer.on ? mmss(timer.left) : "Rest 2:30") + '</button>';
+    h += '<button class="finish" data-finish="1">Finish ' + sess.name + '</button>';
+    h += '</div>';
+
+    if (toastMsg) h += '<div class="toast">' + toastMsg + '</div>';
+    if (sheet === "history") h += historySheet();
+    if (sheet === "reset") h += resetSheet();
+
+    root.innerHTML = h;
+    bind();
+  }
+
+  function mmss(t) {
+    var m = Math.floor(t / 60), s = t % 60;
+    return m + ":" + (s < 10 ? "0" : "") + s;
+  }
+
+  function historySheet() {
+    var h = '<div class="sheet" data-close="1"><div class="sheetin"><h2>Training log</h2>';
+    if (!S.history.length) {
+      h += '<div class="empty">Nothing logged yet. Fill in today\'s reps and hit finish.</div>';
+    } else {
+      S.history.slice().reverse().slice(0, 40).forEach(function (r) {
+        h += '<div class="hrow"><div class="d">' + r.date + ' · ' + r.name + '</div>' + r.summary + '</div>';
+      });
+    }
+    h += '<button class="close" data-close="1">Close</button></div></div>';
+    return h;
+  }
+  function resetSheet() {
+    return '<div class="sheet" data-close="1"><div class="sheetin"><h2>Start over?</h2>' +
+      '<div class="empty">This clears every load, every logged session, and puts you back on the pull day.</div>' +
+      '<button class="close" data-wipe="1" style="border-color:#E7796A;color:#E7796A">Erase everything</button>' +
+      '<button class="close" data-close="1">Keep my log</button></div></div>';
+  }
+
+  function toast(m) {
+    toastMsg = m;
+    clearTimeout(toastT);
+    toastT = setTimeout(function () { toastMsg = ""; render(); }, 3200);
+  }
+
+  /* ---------- events ---------- */
+  function bind() {
+    root.querySelectorAll("[data-unit]").forEach(function (b) {
+      b.onclick = function () {
+        var u = b.getAttribute("data-unit");
+        if (u === S.unit) return;
+        var f = u === "kg" ? 0.4536 : 2.2046;
+        S.unit = u;
+        Object.keys(S.weights).forEach(function (k) { S.weights[k] = round(S.weights[k] * f); });
+        save(); render();
+      };
+    });
+    root.querySelectorAll("[data-sheet]").forEach(function (b) {
+      b.onclick = function () { sheet = b.getAttribute("data-sheet"); render(); };
+    });
+    root.querySelectorAll("[data-close]").forEach(function (b) {
+      b.onclick = function (ev) { if (ev.target === b) { sheet = null; render(); } };
+    });
+    var wipe = root.querySelector("[data-wipe]");
+    if (wipe) wipe.onclick = function () {
+      S.idx = 0; S.count = 0; S.weights = {}; S.fails = {}; S.draft = {}; S.history = [];
+      sheet = null; save(); render();
+    };
+    root.querySelectorAll("[data-goto]").forEach(function (b) {
+      b.onclick = function () { S.idx = +b.getAttribute("data-goto"); S.draft = {}; save(); render(); };
+    });
+
+    var sess = SESSIONS[S.idx];
+    root.querySelectorAll("[data-load]").forEach(function (b) {
+      b.onclick = function () {
+        var e = sess.ex[+b.getAttribute("data-load")];
+        var d = +b.getAttribute("data-dir");
+        var q = S.unit === "kg" ? 2.5 : 5;
+        var cur = S.weights[e.id] || 0;
+        S.weights[e.id] = Math.max(0, cur + d * q);
+        save(); render();
+      };
+    });
+    root.querySelectorAll("[data-w]").forEach(function (inp) {
+      inp.onchange = function () {
+        var e = sess.ex[+inp.getAttribute("data-w")];
+        S.weights[e.id] = inp.value === "" ? undefined : Number(inp.value);
+        save(); render();
+      };
+    });
+    root.querySelectorAll("[data-rep]").forEach(function (inp) {
+      inp.onchange = function () {
+        var e = sess.ex[+inp.getAttribute("data-rep")];
+        var s = +inp.getAttribute("data-set");
+        var arr = S.draft[e.id] || [];
+        arr[s] = inp.value === "" ? undefined : Number(inp.value);
+        S.draft[e.id] = arr;
+        save(); render();
+      };
+      inp.onfocus = function () { inp.select(); };
+    });
+
+    var t = root.querySelector("[data-timer]");
+    if (t) t.onclick = function () {
+      if (timer.on) { timer.on = false; clearInterval(timer.tick); render(); return; }
+      timer.on = true; timer.left = 150;
+      timer.tick = setInterval(function () {
+        timer.left--;
+        if (timer.left <= 0) { clearInterval(timer.tick); timer.on = false; toast("Rest over — next set."); }
+        render();
+      }, 1000);
+      render();
+    };
+
+    var f = root.querySelector("[data-finish]");
+    if (f) f.onclick = finish;
+  }
+
+  /* ---------- progression ---------- */
+  function finish() {
+    var sess = SESSIONS[S.idx];
+    var done = [], msgs = [], parts = [];
+
+    sess.ex.forEach(function (e) {
+      var reps = S.draft[e.id] || [];
+      var w = S.weights[e.id];
+      var filled = reps.filter(function (r) { return r !== undefined && r !== "" && !isNaN(r); });
+      if (!filled.length || w === undefined) return;
+      done.push(e.id);
+      parts.push(e.name + " " + fmt(w) + " " + S.unit + " — " + reps.map(function (r) {
+        return (r === undefined || r === "") ? "–" : r;
+      }).join("/"));
+
+      var hitAll = reps.length >= e.sets && reps.every(function (r) {
+        return r !== undefined && r !== "" && Number(r) >= (e.kind === "lp" ? e.low : e.high);
+      });
+
+      if (e.kind === "lp") {
+        if (hitAll) {
+          S.weights[e.id] = round(w + stepFor(e));
+          S.fails[e.id] = 0;
+          msgs.push(e.name + " → " + fmt(S.weights[e.id]));
+        } else {
+          S.fails[e.id] = (S.fails[e.id] || 0) + 1;
+          if (S.fails[e.id] >= 3) {
+            S.weights[e.id] = round(w * 0.9);
+            S.fails[e.id] = 0;
+            msgs.push(e.name + " deloaded to " + fmt(S.weights[e.id]));
+          }
+        }
+      } else if (hitAll) {
+        S.weights[e.id] = round(w + (S.unit === "kg" ? 2.5 : 5));
+        msgs.push(e.name + " → " + fmt(S.weights[e.id]));
+      }
+    });
+
+    if (!done.length) { toast("Log at least one set first."); render(); return; }
+
+    var d = new Date();
+    S.history.push({
+      date: d.toLocaleDateString(undefined, { month: "short", day: "numeric" }),
+      name: sess.name,
+      summary: parts.join("<br>")
+    });
+    S.count++;
+    S.idx = (S.idx + 1) % SESSIONS.length;
+    S.draft = {};
+    S.draftFor = SESSIONS[S.idx].id;
+    save();
+    toast(msgs.length ? "Saved. " + msgs.slice(0, 3).join(", ") + (msgs.length > 3 ? " +" + (msgs.length - 3) + " more" : "") : "Saved. Same loads next time.");
+    render();
+  }
+
+  /* ---------- boot ---------- */
+  (async function () {
+    var saved = await store.get(KEY);
+    if (saved) S = Object.assign(S, saved);
+    render();
+  })();
+})();
+</script>
+
+</body>
+</html>
